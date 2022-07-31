@@ -25,7 +25,7 @@ Constraint: le top manager should be mentioned in the first relationship
 ## Screenshot
 Felie: I've implement a system to replace terminal tree by **vertical blocs**
 
-![screenshot](demo/chart.png "Default")
+![screenshot](chart.png "Default")
 
 ## License
 PHP-to-OrgChart is licensed under GPLv2 license
