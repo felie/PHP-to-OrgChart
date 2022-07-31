@@ -3,9 +3,8 @@
    Awesome see https://github.com/Awezome/PHP-to-OrgChart
    felie francois@elie.org 2022 
 */
-    function get_data($file){
-        $liste=file_get_contents($file);
-
+    function get_data($liste){
+        $liste=str_replace("\r\n","\n",$liste);
         $relations=[];
         $liste=explode("\n",$liste);
         $top=explode(' -- ',$liste[0])[1];
@@ -14,8 +13,8 @@
             $r=explode(' -- ',$value);
             $relations[$r[1]][].=$r[0]; 
             }
-            
-        function find_place(&$item,$key,$element){
+                
+        function find_place(&$item,$key,&$element){
             if(($item)==$element[0])
                 $item=[$item => $element[1]];
         }
@@ -24,7 +23,6 @@
             array_walk_recursive($relations,'find_place',[$sub,$man]); // place the table in depth
         // keep first node only
         $relations=[$top => $relations["$top"]];
-
         return $relations;
     }
     

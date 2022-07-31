@@ -27,6 +27,10 @@ Felie: I've implement a system to replace terminal tree by **vertical blocs**
 
 ![screenshot](chart.png "Default")
 
+## Do you want a demo online ?
+
+See here: https://elie.org/orgchart
+
 ## License
 PHP-to-OrgChart is licensed under GPLv2 license
 
