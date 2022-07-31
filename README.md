@@ -1,16 +1,12 @@
-PHP-to-OrgChart
-================
+# PHP-to-OrgChart
 
-A Organisation Chart , width Pure PHP and CSS Implement 
-
-## Initial system
+A Organisation Chart , width Pure PHP and CSS Implement
 
 ## The initial system 
 The initial built chart from a php array
 
 ## This version (felie)
-
-This version build chart from a data file which is a list of relationship person -- n+1
+This version build chart from a data file which is a list of relationship "person -- n+1"
 
 Constraint: le top manager should be mentioned in the first relationship
 
@@ -30,7 +26,7 @@ Constraint: le top manager should be mentioned in the first relationship
 PHP-to-OrgChart is licensed under GPLv2 license
 
 ## Screenshot
-Felie: I ve implement a system to replace terminal tree by vertical blocs
+Felie: I've implement a system to replace terminal tree by vertical blocs
 
 ![screenshot](demo/chart.png "Default")
 
