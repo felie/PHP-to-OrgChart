@@ -1,0 +1,30 @@
+DG1 -- CEO
+DG2 -- CEO
+DG3 -- CEO
+agent 1 -- DG3
+agent 2 -- DG3
+director 1 -- DG1
+director 2 -- DG1
+director 3 -- DG2
+director 4 -- DG3
+vendor 1 -- director 4
+vendor 2 -- director 4
+vendor 3 -- director 4
+vendor 4 -- director 4
+vendor 5 -- director 4
+vendor 6 -- director 4
+vendor 7 -- director 4
+assistant -- DG3
+manager 1 -- director 2
+manager 2 -- director 2
+agent 4 -- manager 1
+agent 5 -- manager 1
+agent 6 -- manager 1
+agent 7 -- manager 1
+agent 8 -- manager 2
+agent 9 -- manager 2
+agent 10 -- manager 2
+agent 11 -- manager 2
+agent 12 -- manager 2
+agent 13 -- manager 2
+

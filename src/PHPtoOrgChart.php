@@ -1,6 +1,35 @@
 <?php
+/* Licenced GPLv2
+   Awesome see https://github.com/Awezome/PHP-to-OrgChart
+   felie francois@elie.org 2022 
+*/
+    function get_data($file){
+        $liste=file_get_contents($file);
+
+        $relations=[];
+        $liste=explode("\n",$liste);
+        $top=explode(' -- ',$liste[0])[1];
+
+        foreach($liste as $key => &$value){
+            $r=explode(' -- ',$value);
+            $relations[$r[1]][].=$r[0]; 
+            }
+            
+        function find_place(&$item,$key,&$element){
+            if(($item)==$element[0])
+                $item=[$item => $element[1]];
+        }
+
+        foreach($relations as $sub => $man)
+            array_walk_recursive($relations,'find_place',[$sub,$man]); // place the table in depth
+        // keep first node only
+        $relations=[$top => $relations["$top"]];
+
+        return $relations;
+    }
+    
     function PHPtoOrgChart(array $arr,$title='') {
-        // replace terminal tree by blocs of cells
+        // replace terminal tree by blocs of cells (felie)
         $bloc=true;
         $bl=[];
         foreach($arr as $e){
