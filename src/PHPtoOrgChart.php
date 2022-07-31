@@ -15,7 +15,7 @@
             $relations[$r[1]][].=$r[0]; 
             }
             
-        function find_place(&$item,$key,&$element){
+        function find_place(&$item,$key,$element){
             if(($item)==$element[0])
                 $item=[$item => $element[1]];
         }
