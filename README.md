@@ -3,15 +3,31 @@ PHP-to-OrgChart
 
 A Organisation Chart , width Pure PHP and CSS Implement 
 
-blog is here http://www.awezome.net/1967/
+## Initial system
 
-## Contributing
+## The initial system 
+The initial built chart from a php array
 
-Tell me the bugs!! Give me more ideas !!
-Patches, suggestions, and comments are welcome!!
+## This version (felie)
+
+This version build chart from a data file which is a list of relationship person -- n+1
+
+Constraint: le top manager should be mentioned in the first relationship
+
+    DG1 -- CEO
+    DG2 -- CEO
+    DG3 -- CEO
+    agent 1 -- DG3
+    agent 2 -- DG3
+    director 1 -- DG1
+    director 2 -- DG1
+    director 3 -- DG2
+    director 4 -- DG3
+    vendor 1 -- director 4
+    ...
 
 ## License
-Show Your Math is licensed under the [GPLv2 license.](https://github.com/Awesomez/PHP-to-OrgChart/master/LICENSE)
+PHP-to-OrgChart is licensed under GPLv2 license
 
 ## Screenshot
 Felie: I ve implement a system to replace terminal tree by vertical blocs
